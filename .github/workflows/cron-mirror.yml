@@ -20,8 +20,8 @@ jobs:
         with:
           repository: alexv587/charging-oss
           ref: gh-pages
-      - name: Run Script
-        run: |
-          git remote remove origin
-          git remote add origin https://github.com/${{github.repository}}.git
-          git push --set-upstream origin gh-pages
+      - name: Deploy Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./
+          branch: gh-pages
