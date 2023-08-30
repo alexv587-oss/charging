@@ -22,7 +22,7 @@ jobs:
           ref: gh-pages
       - name: Run Script
         run: |
-          git remote add origin https://github.com/${{github.repository}}
+          # git remote add origin https://github.com/${{github.repository}}
           git push
         
         
